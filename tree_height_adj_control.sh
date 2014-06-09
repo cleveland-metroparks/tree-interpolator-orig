@@ -1,0 +1,33 @@
+#!/bin/bash
+echo
+echo "// Union all the trees together into one object"
+printf "\n\n"
+echo "union {"
+echo 
+echo "	#declare Rnd_1 = seed (1153);"
+echo 
+echo "	#declare LastIndex = dimension_size(tree_coords_$1, 1)-2;" 
+echo "	#declare Index = 0;" 
+echo "	#while(Index <= LastIndex)" 
+echo "                        object  {" 
+echo "	                      TREE" 
+#echo "						 scale 1.0"
+echo "        		         scale tree_height_$1[Index]" 
+echo "		                rotate <0,rand(Rnd_1)*360,0>" 
+echo "		                translate tree_coords_$1[Index] " 
+echo "        	        }" 
+echo "		#declare Index = Index + 1;" 
+echo "	#end" 
+echo 
+echo "// Pigment trees according to distance from camera" 
+echo "	 pigment {" 
+echo " 		gradient x color_map {" 
+echo " 			[0 color rgb 1]" 
+echo " 			[1 color rgb 0]" 
+echo " 		}" 
+echo "	 	scale <vlength(Camera_Location-Camera_Lookat),1,1>" 
+echo " 	 	Reorient_Trans(x, Camera_Lookat-Camera_Location)" 
+echo " 	 	translate Camera_Location" 
+echo "	 }" 
+echo " 	finish {ambient 1}" 
+echo "}" 
