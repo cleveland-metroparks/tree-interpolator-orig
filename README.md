@@ -13,23 +13,11 @@ This output is accomplished by using (effectively) a 3D tree "stamp" which is pl
 
 **Requirements:**
 
-* Linux Machine Running Wine
-* rapidlasso's LASTools: http://rapidlasso.com/lastools/
+* Ubuntu
 * PovRay 3.6 or later: http://povray.org/
 * Bourne Again Shell (BASH)
-(make sure PovRay, LASTools, tree.inc, and treepov.inc are included in your path)
 
 **Functionality**
-
-Written (ATM) in BASH, this code does a few simple things:
-* Uses lasheight to calculate the height of all points above ground
-* Uses las2las to remove class 1 and 2 in the LiDAR data, leaving class 5 (tall vegetation)
-* Converts the las to text and creates:
-  * File of coordinates of XY laspoints, as a PovRay array and an array of point heights from ground.  XY array is used to place tree "stamp", point height array used to scale stamp size in XYZ dimensions
-  * PovRay File for rendering (*.pov) to PNG (*.png)
-  * Executes the render of the PNG
-  * World file (*.pgw) to reference the PNG into your coordinate system.
-
 
 tree.inc is a triangular mesh of a tree generated using Pov-Tree, now defunct but available at the illustrious Internet Archive: http://web.archive.org/web/*/http://propro.ru/go/Wshop/povtree/povtree.html (in case you want a different tree shape).
 treepov.inc is the additional code needed create the renderable povray document
