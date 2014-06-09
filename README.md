@@ -16,7 +16,7 @@ This output is accomplished by using (effectively) a 3D tree "stamp" which is pl
 * Ubuntu
 * PovRay 3.6 or later: http://povray.org/
 * Bourne Again Shell (BASH)
-* liblas (e.g. ```SHELL sudo apt-get install liblas-dev ```)
+* liblas (e.g. ```sudo apt-get install liblas-dev ```)
 
 **Functionality**
 
