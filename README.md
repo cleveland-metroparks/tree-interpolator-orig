@@ -24,11 +24,11 @@ treepov.inc is the additional code needed create the renderable povray document
 
 **Usage**
 ```SHELL
-tree-interpolator.sh input.las output-name width-height pixel-size
+...
 ```
 e.g.
 ```SHELL
-./tree-interpolator.sh input.las Licking 5000 10 
+...
 ```
 
 **Outputs**
