@@ -7,7 +7,7 @@ debug=false
 #debug=true
 
 #run las2las to correct any bounding box errors and rename all the .las files to nXXXX_XXX.las
-for name in *.las; do las2las -i $name -o n${name:1:4}_${name:5:7} ; rm $name ; done
+#for name in *.las; do las2las -i $name -o n${name:1:4}_${name:5:7} ; rm $name ; done
 
 for f in $( ls *.las); do
 #for f in $( ls n2240_6*.las); do
